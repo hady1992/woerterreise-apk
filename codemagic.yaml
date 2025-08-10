@@ -1,11 +1,12 @@
 workflows:
-  android-debug:
-    name: Build Android Debug APK
-    max_build_duration: 60
+  android_debug:
+    name: Android Debug APK
     environment:
-      flutter: stable
+      node: 18
+      java: 17
     scripts:
-      - flutter pub get
-      - flutter build apk --debug
+      - npm install
+      - npx cap sync android
+      - cd android && ./gradlew assembleDebug
     artifacts:
-      - build/app/outputs/flutter-apk/app-debug.apk
+      - android/app/build/outputs/apk/debug/app-debug.apk
