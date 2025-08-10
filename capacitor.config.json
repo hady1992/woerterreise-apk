@@ -1,0 +1,9 @@
+{
+  "appId": "de.woerterreise.app",
+  "appName": "Woerterreise",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "http"
+  }
+}
